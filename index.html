@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="林晓夏 · 旅行博主个人主页。用脚步丈量世界，用镜头收藏光影。"
+    />
+    <title>林晓夏 · 行走的故事</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="主导航">
+        <a class="logo" href="#top">林晓夏<span aria-hidden="true"> · </span>旅行</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="打开菜单"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about">关于我</a></li>
+          <li><a href="#destinations">目的地</a></li>
+          <li><a href="#gallery">瞬间</a></li>
+          <li><a class="nav-cta" href="#contact">联系</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80"
+            alt=""
+            width="1920"
+            height="1080"
+          />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content container">
+          <p class="eyebrow">旅行博主 · 摄影师 · 故事收集者</p>
+          <h1 id="hero-title">林晓夏</h1>
+          <p class="tagline">
+            用脚步丈量世界，用镜头收藏光影。<br />
+            在山海之间，写下属于自己的故事。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#destinations">探索旅程</a>
+            <a class="btn btn-ghost" href="#about">认识我</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-visual">
+            <img
+              src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=900&q=80"
+              alt="林晓夏背着背包站在海边看向远方"
+              width="900"
+              height="1100"
+              loading="lazy"
+            />
+            <div class="about-badge" aria-hidden="true">
+              <strong>42+</strong>
+              <span>国家 / 地区</span>
+            </div>
+          </div>
+          <div class="about-copy">
+            <p class="section-label">关于我</p>
+            <h2 id="about-title">在路上，遇见更好的自己</h2>
+            <p>
+              你好，我是林晓夏。生于江南水乡，却总被远方的风声召唤。过去八年，我走过丝绸之路的驼铃、地中海的落日、冰岛的极光，也在东南亚的雨季里学会与慢时光和解。
+            </p>
+            <p>
+              这里记录我的旅行手记、目的地攻略与旅途中的人与景。希望这些文字与影像，能成为你下一段旅程的小小灵感。
+            </p>
+            <ul class="about-stats" role="list">
+              <li>
+                <strong>180+</strong>
+                <span>城市足迹</span>
+              </li>
+              <li>
+                <strong>6</strong>
+                <span>年全职旅行</span>
+              </li>
+              <li>
+                <strong>320k</strong>
+                <span>读者同行</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="destinations section"
+        id="destinations"
+        aria-labelledby="destinations-title"
+      >
+        <div class="container">
+          <div class="section-head">
+            <p class="section-label">精选目的地</p>
+            <h2 id="destinations-title">旅途故事</h2>
+            <p class="section-desc">
+              几段难忘的旅程，几座愿意再去一次的城市。点击卡片，感受故事的温度。
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="trip-card">
+              <div class="trip-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80"
+                  alt="京都清水寺附近的秋季红叶与古寺"
+                  width="800"
+                  height="560"
+                  loading="lazy"
+                />
+              </div>
+              <div class="trip-card-body">
+                <p class="trip-meta">日本 · 京都 · 秋</p>
+                <h3>红叶季节的慢京都</h3>
+                <p>
+                  在鸭川边吃便当，穿过哲学之道，听风穿过竹林。京都教会我：旅行也可以不赶路。
+                </p>
+                <span class="chip">5 天手记</span>
+              </div>
+            </article>
+
+            <article class="trip-card">
+              <div class="trip-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=800&q=80"
+                  alt="西班牙巴塞罗那圣家堂外立面在阳光下"
+                  width="800"
+                  height="560"
+                  loading="lazy"
+                />
+              </div>
+              <div class="trip-card-body">
+                <p class="trip-meta">西班牙 · 巴塞罗那 · 夏</p>
+                <h3>高迪与海风的午后</h3>
+                <p>
+                  圣家堂的光影、哥特区的窄巷、海滩上的吉他声。这座城市像一杯加冰的桑格利亚。
+                </p>
+                <span class="chip">城市漫游</span>
+              </div>
+            </article>
+
+            <article class="trip-card">
+              <div class="trip-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80"
+                  alt="雪山与湖泊交汇的壮丽高山景色"
+                  width="800"
+                  height="560"
+                  loading="lazy"
+                />
+              </div>
+              <div class="trip-card-body">
+                <p class="trip-meta">中国 · 川西 · 冬</p>
+                <h3>雪山下的沉默与星空</h3>
+                <p>
+                  从成都到新都桥，海拔上升，喧嚣落下。高原的夜空干净得像一张未写过字的纸。
+                </p>
+                <span class="chip">公路旅行</span>
+              </div>
+            </article>
+
+            <article class="trip-card">
+              <div class="trip-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80"
+                  alt="泰国长尾船停靠在翠绿岛屿旁的碧蓝海水"
+                  width="800"
+                  height="560"
+                  loading="lazy"
+                />
+              </div>
+              <div class="trip-card-body">
+                <p class="trip-meta">泰国 · 甲米 · 春</p>
+                <h3>蓝绿色的喘息之地</h3>
+                <p>
+                  长尾船切开海面，石灰岩岛屿从雾中浮现。把手机收进防水袋，把时间还给潮汐。
+                </p>
+                <span class="chip">海岛慢游</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
+        <div class="container">
+          <div class="section-head">
+            <p class="section-label">光影瞬间</p>
+            <h2 id="gallery-title">旅途相册</h2>
+            <p class="section-desc">一些尚未写成文字的画面，先放在这里晒太阳。</p>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item tall">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80"
+                alt="热带海滩上的碧蓝海水与白色浪花"
+                width="700"
+                height="900"
+                loading="lazy"
+              />
+              <figcaption>马尔代夫 · 清晨的海</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=700&q=80"
+                alt="意大利五渔村彩色房屋依山临海"
+                width="700"
+                height="500"
+                loading="lazy"
+              />
+              <figcaption>五渔村 · 悬崖上的颜色</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=700&q=80"
+                alt="湖面倒映着远山与云雾的宁静景色"
+                width="700"
+                height="500"
+                loading="lazy"
+              />
+              <figcaption>新西兰 · 湖心的安静</figcaption>
+            </figure>
+            <figure class="gallery-item wide">
+              <img
+                src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80"
+                alt="雾气缭绕的绿色山丘与日出金光"
+                width="1200"
+                height="700"
+                loading="lazy"
+              />
+              <figcaption>苏格兰高地 · 雾中日出</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=700&q=80"
+                alt="威尼斯运河上的贡多拉与古老建筑"
+                width="700"
+                height="500"
+                loading="lazy"
+              />
+              <figcaption>威尼斯 · 水面的倒影</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
+                alt="沙漠中金色沙丘在夕阳下起伏"
+                width="700"
+                height="500"
+                loading="lazy"
+              />
+              <figcaption>撒哈拉 · 金色的黄昏</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-panel">
+          <div class="contact-copy">
+            <p class="section-label">保持联系</p>
+            <h2 id="contact-title">一起去远方聊聊？</h2>
+            <p>
+              品牌合作、约稿、讲座邀请，或只是想分享一段旅程——欢迎写信给我。我会尽量在三个工作日内回复。
+            </p>
+            <a class="email-link" href="mailto:xiaoxia.lin@example.com"
+              >xiaoxia.lin@example.com</a
+            >
+            <ul class="socials" aria-label="社交媒体">
+              <li>
+                <a href="https://weibo.com/" target="_blank" rel="noopener noreferrer"
+                  >微博</a
+                >
+              </li>
+              <li>
+                <a href="https://www.xiaohongshu.com/" target="_blank" rel="noopener noreferrer"
+                  >小红书</a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a href="https://www.douyin.com/" target="_blank" rel="noopener noreferrer"
+                  >抖音</a
+                >
+              </li>
+            </ul>
+          </div>
+          <form class="contact-form" action="#" method="post">
+            <label>
+              你的名字
+              <input type="text" name="name" autocomplete="name" placeholder="怎么称呼你" required />
+            </label>
+            <label>
+              邮箱
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              />
+            </label>
+            <label>
+              想说的话
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="一段旅途、一次合作，或一句问候…"
+                required
+              ></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">发送留言</button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> 林晓夏 · 行走的故事</p>
+        <p class="footer-note">用脚步丈量世界 · 用镜头收藏光影</p>
+        <a class="back-top" href="#top">回到顶部</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
