@@ -26,6 +26,10 @@
 - Vite 5
 - 原生 HTML / CSS / JavaScript（无框架）
 
+## 部署
+
+推送到 `main` 分支会通过 GitHub Actions 自动构建并部署到 GitHub Pages：https://hubboys.github.io/grok-bot-demo/
+
 ## 许可
 
 演示项目，仅供学习与展示。
