@@ -12,17 +12,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">跳到主要内容</a>
+    <div class="ambient" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="orb orb-c"></span>
+    </div>
 
     <header class="site-header" id="top">
       <nav class="nav" aria-label="主导航">
-        <a class="logo" href="#top">林晓夏<span aria-hidden="true"> · </span>旅行</a>
+        <a class="logo" href="#top">
+          <span class="logo-mark" aria-hidden="true"></span>
+          林晓夏<span class="logo-sep" aria-hidden="true"> · </span><span class="logo-tag">旅行</span>
+        </a>
         <button
           class="nav-toggle"
           type="button"
@@ -53,37 +61,44 @@
             height="1080"
           />
           <div class="hero-overlay"></div>
+          <div class="hero-glow"></div>
         </div>
         <div class="hero-content container">
-          <p class="eyebrow">旅行博主 · 摄影师 · 故事收集者</p>
-          <h1 id="hero-title">林晓夏</h1>
-          <p class="tagline">
+          <p class="eyebrow reveal">旅行博主 · 摄影师 · 故事收集者</p>
+          <h1 id="hero-title" class="reveal" data-reveal-delay="80">林晓夏</h1>
+          <p class="tagline reveal" data-reveal-delay="160">
             用脚步丈量世界，用镜头收藏光影。<br />
             在山海之间，写下属于自己的故事。
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions reveal" data-reveal-delay="240">
             <a class="btn btn-primary" href="#destinations">探索旅程</a>
             <a class="btn btn-ghost" href="#about">认识我</a>
+          </div>
+          <div class="hero-scroll" aria-hidden="true">
+            <span>向下滑动</span>
+            <span class="scroll-line"></span>
           </div>
         </div>
       </section>
 
       <section class="about section" id="about" aria-labelledby="about-title">
         <div class="container about-grid">
-          <div class="about-visual">
-            <img
-              src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=900&q=80"
-              alt="林晓夏背着背包站在海边看向远方"
-              width="900"
-              height="1100"
-              loading="lazy"
-            />
-            <div class="about-badge" aria-hidden="true">
+          <div class="about-visual reveal">
+            <div class="about-frame">
+              <img
+                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=900&q=80"
+                alt="林晓夏背着背包站在海边看向远方"
+                width="900"
+                height="1100"
+                loading="lazy"
+              />
+            </div>
+            <div class="about-badge glass-panel" aria-hidden="true">
               <strong>42+</strong>
               <span>国家 / 地区</span>
             </div>
           </div>
-          <div class="about-copy">
+          <div class="about-copy reveal" data-reveal-delay="100">
             <p class="section-label">关于我</p>
             <h2 id="about-title">在路上，遇见更好的自己</h2>
             <p>
@@ -93,15 +108,15 @@
               这里记录我的旅行手记、目的地攻略与旅途中的人与景。希望这些文字与影像，能成为你下一段旅程的小小灵感。
             </p>
             <ul class="about-stats" role="list">
-              <li>
+              <li class="glass-panel">
                 <strong>180+</strong>
                 <span>城市足迹</span>
               </li>
-              <li>
+              <li class="glass-panel">
                 <strong>6</strong>
                 <span>年全职旅行</span>
               </li>
-              <li>
+              <li class="glass-panel">
                 <strong>320k</strong>
                 <span>读者同行</span>
               </li>
@@ -116,15 +131,15 @@
         aria-labelledby="destinations-title"
       >
         <div class="container">
-          <div class="section-head">
+          <div class="section-head reveal">
             <p class="section-label">精选目的地</p>
             <h2 id="destinations-title">旅途故事</h2>
             <p class="section-desc">
-              几段难忘的旅程，几座愿意再去一次的城市。点击卡片，感受故事的温度。
+              几段难忘的旅程，几座愿意再去一次的城市。点开卡片，感受故事的温度。
             </p>
           </div>
           <div class="card-grid">
-            <article class="trip-card">
+            <article class="trip-card reveal" data-reveal-delay="40">
               <div class="trip-card-media">
                 <img
                   src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80"
@@ -133,6 +148,7 @@
                   height="560"
                   loading="lazy"
                 />
+                <span class="trip-shine" aria-hidden="true"></span>
               </div>
               <div class="trip-card-body">
                 <p class="trip-meta">日本 · 京都 · 秋</p>
@@ -144,7 +160,7 @@
               </div>
             </article>
 
-            <article class="trip-card">
+            <article class="trip-card reveal" data-reveal-delay="100">
               <div class="trip-card-media">
                 <img
                   src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=800&q=80"
@@ -153,6 +169,7 @@
                   height="560"
                   loading="lazy"
                 />
+                <span class="trip-shine" aria-hidden="true"></span>
               </div>
               <div class="trip-card-body">
                 <p class="trip-meta">西班牙 · 巴塞罗那 · 夏</p>
@@ -164,7 +181,7 @@
               </div>
             </article>
 
-            <article class="trip-card">
+            <article class="trip-card reveal" data-reveal-delay="160">
               <div class="trip-card-media">
                 <img
                   src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80"
@@ -173,6 +190,7 @@
                   height="560"
                   loading="lazy"
                 />
+                <span class="trip-shine" aria-hidden="true"></span>
               </div>
               <div class="trip-card-body">
                 <p class="trip-meta">中国 · 川西 · 冬</p>
@@ -184,7 +202,7 @@
               </div>
             </article>
 
-            <article class="trip-card">
+            <article class="trip-card reveal" data-reveal-delay="220">
               <div class="trip-card-media">
                 <img
                   src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80"
@@ -193,6 +211,7 @@
                   height="560"
                   loading="lazy"
                 />
+                <span class="trip-shine" aria-hidden="true"></span>
               </div>
               <div class="trip-card-body">
                 <p class="trip-meta">泰国 · 甲米 · 春</p>
@@ -209,13 +228,13 @@
 
       <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head reveal">
             <p class="section-label">光影瞬间</p>
             <h2 id="gallery-title">旅途相册</h2>
             <p class="section-desc">一些尚未写成文字的画面，先放在这里晒太阳。</p>
           </div>
           <div class="gallery-grid">
-            <figure class="gallery-item tall">
+            <figure class="gallery-item tall reveal">
               <img
                 src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80"
                 alt="热带海滩上的碧蓝海水与白色浪花"
@@ -225,7 +244,7 @@
               />
               <figcaption>马尔代夫 · 清晨的海</figcaption>
             </figure>
-            <figure class="gallery-item">
+            <figure class="gallery-item reveal" data-reveal-delay="60">
               <img
                 src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=700&q=80"
                 alt="意大利五渔村彩色房屋依山临海"
@@ -235,7 +254,7 @@
               />
               <figcaption>五渔村 · 悬崖上的颜色</figcaption>
             </figure>
-            <figure class="gallery-item">
+            <figure class="gallery-item reveal" data-reveal-delay="120">
               <img
                 src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=700&q=80"
                 alt="湖面倒映着远山与云雾的宁静景色"
@@ -245,7 +264,7 @@
               />
               <figcaption>新西兰 · 湖心的安静</figcaption>
             </figure>
-            <figure class="gallery-item wide">
+            <figure class="gallery-item wide reveal" data-reveal-delay="80">
               <img
                 src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80"
                 alt="雾气缭绕的绿色山丘与日出金光"
@@ -255,7 +274,7 @@
               />
               <figcaption>苏格兰高地 · 雾中日出</figcaption>
             </figure>
-            <figure class="gallery-item">
+            <figure class="gallery-item reveal" data-reveal-delay="100">
               <img
                 src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=700&q=80"
                 alt="威尼斯运河上的贡多拉与古老建筑"
@@ -265,7 +284,7 @@
               />
               <figcaption>威尼斯 · 水面的倒影</figcaption>
             </figure>
-            <figure class="gallery-item">
+            <figure class="gallery-item reveal" data-reveal-delay="140">
               <img
                 src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
                 alt="沙漠中金色沙丘在夕阳下起伏"
@@ -280,7 +299,7 @@
       </section>
 
       <section class="contact section" id="contact" aria-labelledby="contact-title">
-        <div class="container contact-panel">
+        <div class="container contact-panel reveal">
           <div class="contact-copy">
             <p class="section-label">保持联系</p>
             <h2 id="contact-title">一起去远方聊聊？</h2>
@@ -313,7 +332,7 @@
               </li>
             </ul>
           </div>
-          <form class="contact-form" action="#" method="post">
+          <form class="contact-form glass-panel" action="#" method="post">
             <label>
               你的名字
               <input type="text" name="name" autocomplete="name" placeholder="怎么称呼你" required />

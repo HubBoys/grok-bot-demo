@@ -1,9 +1,11 @@
+const header = document.querySelector('.site-header')
 const nav = document.querySelector('.nav')
 const toggle = document.querySelector('.nav-toggle')
 const menu = document.querySelector('#nav-menu')
 const year = document.querySelector('#year')
 const form = document.querySelector('.contact-form')
 const formNote = document.querySelector('.form-note')
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 
 if (year) {
   year.textContent = String(new Date().getFullYear())
@@ -26,6 +28,61 @@ menu?.querySelectorAll('a').forEach((link) => {
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenuOpen(false)
+})
+
+function updateHeaderState() {
+  if (!header) return
+  header.classList.toggle('is-scrolled', window.scrollY > 12)
+}
+
+updateHeaderState()
+window.addEventListener('scroll', updateHeaderState, { passive: true })
+
+function revealAll() {
+  document.querySelectorAll('.reveal').forEach((el) => {
+    el.classList.add('is-visible')
+  })
+}
+
+function initScrollReveals() {
+  const elements = document.querySelectorAll('.reveal')
+  if (!elements.length) return
+
+  if (prefersReducedMotion.matches || !('IntersectionObserver' in window)) {
+    revealAll()
+    return
+  }
+
+  elements.forEach((el) => {
+    const delay = el.getAttribute('data-reveal-delay')
+    if (delay) el.style.setProperty('--reveal-delay', `${delay}ms`)
+  })
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        entry.target.classList.add('is-visible')
+        observer.unobserve(entry.target)
+      })
+    },
+    { rootMargin: '0px 0px -8% 0px', threshold: 0.12 },
+  )
+
+  elements.forEach((el) => observer.observe(el))
+
+  // Hero content should appear promptly on load
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.hero .reveal').forEach((el) => {
+      el.classList.add('is-visible')
+    })
+  })
+}
+
+initScrollReveals()
+
+prefersReducedMotion.addEventListener?.('change', (event) => {
+  if (event.matches) revealAll()
 })
 
 form?.addEventListener('submit', (event) => {
